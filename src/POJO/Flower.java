@@ -1,7 +1,9 @@
+package POJO;
+
 /**
  * Created by Eugene on 19-Mar-17.
  */
-public class Point {
+public class Flower {
     private float x;
     private float y;
     private float z;
@@ -10,17 +12,16 @@ public class Point {
 
     @Override
     public String toString() {
-        return "Point{" +
+        return "POJO.Flower{" +
                 "x=" + x +
                 ", y=" + y +
                 ", z=" + z +
                 ", k=" + k +
                 ", type='" + type + '\'' +
-                '}'+
-                '\n';
+                '}';
     }
 
-    public Point(float x, float y, float z, float k, String type) {
+    public Flower(float x, float y, float z, float k, String type) {
         this.x = x;
         this.y = y;
         this.z = z;

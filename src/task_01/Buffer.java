@@ -1,18 +1,19 @@
+package task_01;
+
 /**
  * Created by Eugene on 19-Mar-17.
  */
 public class Buffer {
     public String type;
+    public double dist;
 
     @Override
     public String toString() {
-        return "Buffer{" +
+        return "task_01.Buffer{" +
                 "type='" + type + '\'' +
                 ", dist=" + dist +
                 '}';
     }
-
-    public double dist;
 
     public Buffer(String type, double dist) {
         this.type = type;
