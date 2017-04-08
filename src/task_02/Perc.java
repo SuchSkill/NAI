@@ -39,7 +39,7 @@ public class Perc {
     private static double checkAccuracy(List<Flower> list) {
         double icorrectAttampts = 0;
         for (Flower flower : list) {
-            double result = getPerceptrone(flower);
+            double result = getPercetroneResult(flower);
             boolean isTriggered = result > 0;
             boolean isVersicolor = flower.getType().equals("Iris-versicolor");
             if (!isTriggered) {
@@ -63,7 +63,7 @@ public class Perc {
             double errors = 0;
             for (Flower flower : list) {
                 while (true) {
-                    double result = getPerceptrone(flower);
+                    double result = getPercetroneResult(flower);
                     boolean isTriggered = result > 0;
                     boolean isVersicolor = flower.getType().equals("Iris-versicolor");
                     if (isTriggered) {
@@ -94,7 +94,7 @@ public class Perc {
 
     }
 
-    private static double getPerceptrone(Flower flower) {
+    private static double getPercetroneResult(Flower flower) {
         return ((flower.getX() * perseptron.getWx())
                 + (flower.getY() * perseptron.getWy())
                 + (flower.getK() * perseptron.getWk())

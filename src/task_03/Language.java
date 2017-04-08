@@ -8,12 +8,14 @@ import java.util.Map;
 /**
  * Created by Eugene on 06-Apr-17.
  */
-public class Lenguage {
+public class Language {
     public String name;
-    public List<String> exapmles = new ArrayList<>();
-    public Map<Character, Integer> charFreq = new HashMap<>();
+    public List<Document> docs = new ArrayList<>();
+//    public Map<Character, Integer> charFreq = new HashMap<>();
+//    public double sumOfChars = 0;
 
-    public Lenguage(String name) {
+
+    public Language(String name) {
         this.name = name;
     }
 }
