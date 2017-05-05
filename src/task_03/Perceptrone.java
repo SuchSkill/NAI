@@ -25,6 +25,15 @@ public class Perceptrone {
         return weights;
     }
 
+    @Override
+    public String toString() {
+        return "Perceptrone{" +
+                "language='" + language + '\'' +
+                ", weights=" + weights +
+                ", treshhold=" + treshhold +
+                '}' + '\n';
+    }
+
     public void setWeights(ArrayList<Double> weights) {
         this.weights = weights;
     }

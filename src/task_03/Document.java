@@ -12,4 +12,14 @@ public class Document {
     public Document(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "Document{" +
+                "name='" + name + '\'' +
+//                ", charMap=" + charMap +
+                ", charMapAccurance=" + charMapAccurance +
+//                ", sumOfChars=" + sumOfChars +
+                '}' + '\n';
+    }
 }
