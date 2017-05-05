@@ -34,8 +34,8 @@ public class Main {
             i++;
             trainPerceptrones(trainListLenguages);
             accuracy = calcAccutacy(trainListLenguages);
-            System.out.println("accuracy = " + accuracy);
         }
+        System.out.println("accuracy = " + accuracy);
         System.out.println("after " + i + " iterations");
 
         System.out.println();
