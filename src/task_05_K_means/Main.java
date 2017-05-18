@@ -22,6 +22,7 @@ public class Main {
 
 //        System.out.println(irisList);
 
+
         int i = Integer.parseInt(args[0]);
         initCentroids(i);
         List<Integer> oldL = new ArrayList<>();
@@ -139,7 +140,6 @@ public class Main {
 
     private static void initData() throws IOException {
         String pathToFolder = "C:\\Users\\Eugene\\IdeaProjects\\NAI\\src\\task_05_K_means\\iris.txt";
-
         readFile(Paths.get(pathToFolder), irisList);
 
 

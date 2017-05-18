@@ -23,7 +23,12 @@ public class Main {
 
         calcTest();
 
-        if (args!=null){
+        ifUserInput(args);
+
+    }
+
+    private static void ifUserInput(String[] args) {
+        if (true){
             int size = trainTable.AttributeAccuranceList.size();
             Map<String, Integer> stringIntegerMapLastColunm = trainTable.AttributeAccuranceList.get(size - 1);
             Car car = new Car();
@@ -38,17 +43,17 @@ public class Main {
                     String attribute = car.attributes.get(i);
                     double probability = calcProbability(i, attribute, s);
                     totalProbability *= probability;
-//                    System.out.println(probability + " " + attribute + " " + s);
+                    System.out.println(probability + " " + attribute + " " + s);
                 }
                 if (totalProbability > maxPobability){
                     maxName = s;
                     maxPobability = totalProbability;
                 }
-//            System.out.println("----------");
-//            System.out.println(totalProbability);
-//            System.out.println();
+            System.out.println("----------");
+            System.out.println(totalProbability);
+            System.out.println();
             }
-//        System.out.println("maxName = " + maxName);
+        System.out.println("maxName = " + maxName);
 //        System.out.println("maxProbability = " + maxPobability);
             String lastAttribute = car.attributes.get(car.attributes.size()-1);
             if (maxName.equals(lastAttribute)){
@@ -59,7 +64,6 @@ public class Main {
             }
 
         }
-
     }
 
     private static void calcTest() {
@@ -75,17 +79,17 @@ public class Main {
                     String attribute = car.attributes.get(i);
                     double probability = calcProbability(i, attribute, s);
                     totalProbability *= probability;
-//                    System.out.println(probability + " " + attribute + " " + s);
+                    System.out.println(probability + " " + attribute + " " + s);
                 }
                 if (totalProbability > maxPobability){
                     maxName = s;
                     maxPobability = totalProbability;
                 }
-//            System.out.println("----------");
-//            System.out.println(totalProbability);
-//            System.out.println();
+            System.out.println("----------");
+            System.out.println(totalProbability);
+            System.out.println();
             }
-//        System.out.println("maxName = " + maxName);
+        System.out.println("maxName = " + maxName);
 //        System.out.println("maxProbability = " + maxPobability);
             String lastAttribute = car.attributes.get(car.attributes.size()-1);
             if (maxName.equals(lastAttribute)){
