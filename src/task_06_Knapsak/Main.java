@@ -20,6 +20,8 @@ public class Main {
     static int maxValue = 0;
     static String maxItem;
     static boolean[] maxb;
+    static boolean[] current = new boolean[30];
+
 
 
     public static void main(String[] args) throws IOException {
@@ -34,7 +36,7 @@ public class Main {
                 System.out.println(i/10_000_000);
             }
 //            String binStr = intToBinaryShifting(i, items);
-            boolean[] booleans = intToBinaryShiftingBoolean(i, items);
+            intToBinaryShiftingBoolean(i, items);
 //            System.out.println(binStr);
             int j = 0;
             int currentWeight=0;
@@ -47,7 +49,7 @@ public class Main {
 //                }
 //                j++;
 //            }
-            for (boolean b : booleans) {
+            for (boolean b : current) {
                 if (b){//askii num of 1
                     Item item = list.get(j);
                     currentValue += item.value;
@@ -61,7 +63,14 @@ public class Main {
             if(maxValue<currentValue){
                 maxValue=currentValue;
 //                maxItem=binStr;
-                maxb = booleans;
+                maxb = current;
+
+                for (boolean b : maxb) {
+                    if (b){
+                        System.out.print("1");
+                    }else
+                        System.out.print("0");
+                }
 
             }
         }
@@ -122,11 +131,9 @@ public class Main {
 //        }
         return binary;
     }
-    private static boolean[] intToBinaryShiftingBoolean(int number, int base) {
-        final boolean[] ret = new boolean[base];
+    private static void intToBinaryShiftingBoolean(int number, int base) {
         for (int i = 0; i < base; i++) {
-            ret[base - 1 - i] = (1 << i & number) != 0;
+            current[base - 1 - i] = (1 << i & number) != 0;
         }
-        return ret;
     }
 }
